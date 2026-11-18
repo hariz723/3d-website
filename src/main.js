@@ -10,6 +10,7 @@ import { renderWhatsAppButton } from './components/WhatsAppButton.js';
 import { renderQuoteModal, initQuoteModalEvents } from './components/QuoteModal.js';
 import { renderLightbox, initLightboxEvents } from './components/Lightbox.js';
 import { renderCustomizerDrawer, initCustomizerEvents } from './components/CustomizerDrawer.js';
+import { renderCustomCursor, initCustomCursor } from './components/CustomCursor.js';
 
 // Pages
 import { renderHomePage, initHomePageEvents } from './pages/HomePage.js';
@@ -21,12 +22,12 @@ import { renderAboutPage, initAboutPageEvents } from './pages/AboutPage.js';
 import { renderContactPage, initContactPageEvents } from './pages/ContactPage.js';
 
 function updateSEOMeta() {
-  const title = `${appState.studioName} — Photorealistic 3D Interior Rendering Studio | ${appState.city}`;
+  const title = `TD_Alexfolio — ${siteConfig.studio.founderName} | Portfolio & Creative Direction`;
   document.title = title;
 
   const descMeta = document.querySelector('meta[name="description"]');
   if (descMeta) {
-    descMeta.setAttribute('content', `Premium architectural 3D interior visualization studio based in ${appState.city}. We transform blueprints, CAD files, and sketches into ultra-photorealistic renders before construction.`);
+    descMeta.setAttribute('content', `Alexfolio is a bold, high-impact portfolio template built for creatives, digital designers, product designers, art directors, and agencies.`);
   }
 
   // Update JSON-LD structured data
@@ -34,14 +35,18 @@ function updateSEOMeta() {
   if (jsonLdScript) {
     const schemaData = {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": appState.studioName,
-      "description": "Photorealistic 3D Interior Rendering and Architectural Visualization Studio",
+      "@type": "Person",
+      "name": siteConfig.studio.founderName,
+      "jobTitle": siteConfig.studio.roles.join(' & '),
+      "worksFor": {
+        "@type": "Organization",
+        "name": siteConfig.studio.name
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": siteConfig.studio.address,
-        "addressLocality": appState.city,
-        "addressCountry": "US"
+        "addressLocality": siteConfig.studio.city,
+        "addressCountry": "DE"
       },
       "telephone": siteConfig.studio.phone,
       "email": siteConfig.studio.email,
@@ -63,7 +68,7 @@ function renderApp() {
   if (route.startsWith('#/project/')) {
     const id = route.replace('#/project/', '');
     pageContentHtml = renderProjectDetailPage(id);
-  } else if (route.startsWith('#/portfolio')) {
+  } else if (route.startsWith('#/portfolio') || route === '#projects-archive') {
     pageContentHtml = renderPortfolioPage();
   } else if (route === '#/services') {
     pageContentHtml = renderServicesPage();
@@ -79,15 +84,15 @@ function renderApp() {
 
   app.innerHTML = `
     <!-- TOP HAIRLINE SCROLL PROGRESS BAR (Alexfolio) -->
-    <div id="scroll-progress-bar" class="fixed top-0 left-0 h-[2px] bg-[#FF531F] z-50 transition-all duration-75 pointer-events-none" style="width: 0%;"></div>
+    <div id="scroll-progress-bar" class="fixed top-0 left-0 h-[2px] bg-[var(--color-accent)] z-50 transition-all duration-75 pointer-events-none" style="width: 0%;"></div>
 
     <!-- FLOATING SCROLL CHAPTER SPY BADGE (Alexfolio) -->
-    <div class="fixed bottom-6 left-6 z-40 hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111212]/90 backdrop-blur-md border border-white/10 text-white font-mono text-[11px] shadow-2xl pointer-events-none select-none">
-      <span class="w-1.5 h-1.5 rounded-full bg-[#FF531F] animate-ping"></span>
+    <div class="fixed bottom-6 left-6 z-40 hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181717]/90 backdrop-blur-md border border-white/10 text-white font-mono text-[11px] shadow-2xl pointer-events-none select-none">
+      <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] animate-ping"></span>
       <span id="scroll-spy-badge" class="tracking-wider">// 01 INTRO</span>
     </div>
 
-    <div class="min-h-screen flex flex-col justify-between selection:bg-[#FF531F] selection:text-black bg-[#080909] text-[#F2F5F4]">
+    <div class="min-h-screen flex flex-col justify-between selection:bg-[var(--color-accent)] selection:text-black bg-[var(--color-bg)] text-[var(--color-text)]">
       
       <!-- STICKY GLASS HEADER -->
       ${renderHeader()}
@@ -112,10 +117,14 @@ function renderApp() {
       <!-- LIVE STUDIO CUSTOMIZER DRAWER -->
       ${renderCustomizerDrawer()}
 
+      <!-- ALEXFOLIO CUSTOM INTERACTIVE CURSOR -->
+      ${renderCustomCursor()}
+
     </div>
   `;
 
   // Initialize interactive event listeners
+  initCustomCursor();
   initHeaderEvents();
   initFooterEvents();
   initQuoteModalEvents();

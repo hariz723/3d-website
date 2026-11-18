@@ -3,9 +3,9 @@ import { siteConfig } from '../config/siteConfig.js';
 class StateManager {
   constructor() {
     const saved = this.loadSavedConfig();
-    this.studioName = saved.name || siteConfig.studio.name;
-    this.city = saved.city || siteConfig.studio.city;
-    this.primaryColor = saved.primaryColor || siteConfig.colors.primary;
+    this.studioName = saved.name && !saved.name.includes('LOVERA') && !saved.name.includes('AURA') ? saved.name : siteConfig.studio.name;
+    this.city = saved.city && !saved.city.includes('Los Angeles') ? saved.city : siteConfig.studio.city;
+    this.primaryColor = saved.primaryColor || siteConfig.colors.accent;
     this.accentColor = saved.accentColor || siteConfig.colors.accent;
 
     this.activeRoute = window.location.hash || '#home';

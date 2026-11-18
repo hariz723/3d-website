@@ -1,305 +1,339 @@
 /**
  * ===================================================================
- * 🎨 SINGLE-PAGE EDITORIAL PORTFOLIO CONFIGURATION
+ * 🎨 TD_ALEXFOLIO PORTFOLIO CONFIGURATION
  * ===================================================================
- * Easily customize [STUDIO NAME], [CITY], [COLOR], projects, and services.
+ * Reverse-engineered from https://volt.supply/templates/alexfolio
+ * Designed for digital designers, art directors, product designers, and creative studios.
  */
 
 export const siteConfig = {
   // --- STUDIO & FOUNDER IDENTITY ---
   studio: {
-    name: "STUDIO VERSE", // ⬅️ Replace with [STUDIO NAME]
-    founderName: "ALEX GRAHAM", // ⬅️ Founder / Studio Name
-    roles: ["3D Visualizer", "Interior Designer"], // ⬅️ Two role lines
-    city: "New York, NY", // ⬅️ Replace with [CITY]
-    country: "United States",
-    address: "482 Broome Street, SoHo, New York, NY 10013",
-    email: "hello@studioverse.design",
-    phone: "+1 (212) 847-9200",
-    phoneDisplay: "+1 (212) 847-9200",
-    whatsappNumber: "12128479200",
-    whatsappDefaultMessage: "Hi Studio Verse! I have architectural plans and would like to request a 3D interior rendering quote.",
-    turnaround: "48-Hour Initial Whitecard Drafts",
-    revisions: "Unlimited Material Refinements Included",
+    name: "Alex Design & Strategy",
+    founderName: "Alex Graham",
+    roles: ["Web Designer", "Art Director"],
+    city: "Berlin",
+    country: "Germany",
+    address: "Ozeanblickstraße, Berlin 10115, Germany",
+    secondaryAddress: "482 Broome Street, SoHo, New York, NY 10013",
+    email: "hello@alexgraham.com",
+    phone: "+49 30 12345678",
+    phoneDisplay: "+49 30 12345678",
+    whatsappNumber: "493012345678",
+    whatsappDefaultMessage: "Hi Alex! I reviewed your portfolio and would like to discuss a new design and development project.",
+    turnaround: "Rapid sprint turnarounds with design system delivery",
+    revisions: "Iterative sprints & collaborative Figma / Framer handoffs",
   },
 
   // --- BRAND COLORS & THEME ---
   colors: {
-    accent: "#FF531F", // ⬅️ Replace with your [COLOR] (Flame Orange)
-    accentHover: "#E04212",
-    bgDark: "#0A0B0B",
-    bgLight: "#F8F7F4",
-    textDark: "#F3F4F4",
-    textLight: "#111212",
+    accent: "#FF442B", // Alexfolio Electric Vermilion
+    accentHover: "#E03822",
+    bgDark: "#121111",
+    bgLight: "#FAF9F6",
+    surfaceDark: "#181717",
+    surfaceLight: "#FFFFFF",
+    textDark: "#FAFAFA",
+    textLight: "#121111",
   },
 
   // --- SOCIAL PROFILES ---
   socialLinks: [
-    { name: "LinkedIn", url: "https://linkedin.com", handle: "linkedin.com/in/studioverse" },
-    { name: "Instagram", url: "https://instagram.com", handle: "@studioverse.3d" },
-    { name: "Pinterest", url: "https://pinterest.com", handle: "pinterest.com/studioverse" },
-    { name: "Behance", url: "https://behance.net", handle: "behance.net/studioverse" }
+    { name: "Linkedin", url: "https://linkedin.com", handle: "linkedin.com/in/alexgraham" },
+    { name: "Twitter", url: "https://twitter.com", handle: "@alexgraham_ds" },
+    { name: "Instagram", url: "https://instagram.com", handle: "@alexgraham.design" },
+    { name: "Dribbble", url: "https://dribbble.com", handle: "dribbble.com/alexgraham" }
   ],
 
-  // --- ASYMMETRIC HERO RENDER IMAGERY ---
+  // --- ASYMMETRIC HERO SHOWCASE IMAGERY (Alexfolio) ---
   heroImages: {
-    // Large Wide Render
+    // Large Wide Project Card
     wide: {
-      url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85",
-      caption: "Penthouse Great Room // Manhattan",
-      year: "2024"
+      url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=85",
+      caption: "Formula Vintage // Digital Platform & Brand",
+      year: "2024",
+      projectLink: "#/project/formula-vintage"
     },
-    // Large Tall Render
+    // Large Tall Project Card (Asymmetrically offset)
     tall: {
-      url: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85",
-      caption: "Wabi-Sabi Suite // Kyoto Pavilion",
-      year: "2024"
+      url: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=85",
+      caption: "Sprey Zest // Visual Identity & Packaging",
+      year: "2024",
+      projectLink: "#/project/sprey-zest"
     }
   },
 
   // --- // INTRO SECTION ---
   intro: {
     label: "// Intro",
-    headline: "We turn floor plans and ideas into photorealistic interiors, so you can see your space before it is built.",
-    subtext: "Fast 48-hour turnarounds, unlimited material refinements, and sub-millimeter architectural scale precision. No guesswork, no remodeling change orders.",
-    ctaText: "See our work",
+    headline: "Bringing your vision to life quickly and efficiently—whether it's branding, apps, or websites—I've got it covered, delivering smooth and effective solutions from start to finish.",
+    subtext: "Not just about aesthetics, but about developing logical, scalable design systems that are precisely tailored to the web and app application.",
+    ctaText: "See my Work",
     ctaTarget: "#projects"
   },
 
-  // --- // SERVICES (Numbered List 01-04 with Expanding Details) ---
+  // --- // SERVICES (Alexfolio 01-04 Numbered Grid) ---
   services: [
     {
       num: "01",
-      title: "Residential Rendering",
-      description: "Atmospheric, photorealistic visual storytelling for private residences, luxury estates, and townhomes.",
+      title: "Branding & Marketing",
+      description: "Branding that builds trust and drives loyalty through clear visuals and messaging into an unforgettable online experience.",
       subItems: [
-        "Living rooms & open salons",
-        "Master suites & dressing rooms",
-        "Custom chef kitchens & wine cellars",
-        "Spa ensuite bathrooms",
-        "Luxury multi-level villas & outdoor patios"
+        "Brand Strategy and Messaging",
+        "Logo Design & Brandmark Systems",
+        "Visual Identity & Typography Scale",
+        "Brand Guidelines & Component Frameworks",
+        "Marketing Materials & Collateral",
+        "Kinetic & Motion Design"
       ]
     },
     {
       num: "02",
-      title: "Commercial Rendering",
-      description: "High-impact architectural CGI for commercial developments, tenant leasing, and investor pitch decks.",
+      title: "Website Design",
+      description: "Not just about aesthetics, but about developing logical, scalable design systems that are precisely tailored to web and digital touchpoints.",
       subItems: [
-        "Executive corporate offices & boardrooms",
-        "Flagship retail boutiques & showrooms",
-        "Bespoke restaurants & cocktail bars",
-        "Boutique hotels & hospitality lobbies"
+        "High-Conversion Landing Pages",
+        "Corporate & Enterprise Websites",
+        "Interactive Editorial Blogs & Media",
+        "E-commerce & DTC Shopping Flows",
+        "Complex Web Systems & Dashboards"
       ]
     },
     {
       num: "03",
-      title: "2D to 3D Conversion",
-      description: "Transforming flat AutoCAD drawings, sketches, or BIM models into dimensionally accurate 3D geometry.",
+      title: "Web Development",
+      description: "User-focused development that maximizes responsiveness, animations, SEO health, and flawless cross-device performance.",
       subItems: [
-        "2D floor plan to 3D isometric cutaways",
-        "Spatial furniture layouts & circulation studies",
-        "Tactile material, stone & fabric selection matching",
-        "Daylight ingress & artificial lighting simulation"
+        "Framer, Webflow, and Custom Code Builds",
+        "Headless CMS Integration",
+        "Technical SEO & Core Web Vitals Optimization",
+        "Seamless Site Migrations & Hosting",
+        "Micro-Interactions & Scroll Animations"
       ]
     },
     {
       num: "04",
-      title: "Walkthrough and 360°",
-      description: "Next-generation immersive experiences that let buyers walk through unbuilt spaces before construction.",
+      title: "Application Design",
+      description: "User-focused app design that maximizes usability, intuitive information architecture, and encourages sustained customer retention.",
       subItems: [
-        "60fps cinematic 4K video walkthroughs",
-        "360° interactive high-resolution panoramas",
-        "VR-ready real-time tours (Unreal Engine 5)",
-        "Social media reels & marketing video cuts"
+        "Native iOS & Android Mobile Apps",
+        "Modern Desktop Applications",
+        "Multi-Tenant Complex Systems",
+        "Figma Design Systems & Token Optimization",
+        "Interactive Prototypes & User Testing"
       ]
     }
   ],
 
-  // --- // PROJECTS (Vertical List with Hover Cursor Preview & Detail Pages) ---
+  // --- // SELECTED PROJECTS (Alexfolio Core Portfolio) ---
   projects: [
     {
-      id: "tribeca-penthouse",
+      id: "formula-vintage",
       year: "(2024)",
-      title: "The Tribeca Glass Penthouse",
-      shortDescription: "A full-floor Manhattan sanctuary featuring floor-to-ceiling glass, custom fluted limestone columns, and brushed bronze accents.",
-      tags: ["Living Room", "Penthouse", "Minimalist Luxury"],
-      image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85",
+      title: "Formula Vintage",
+      shortDescription: "For Formula Vintage, we crafted a design that honors the rich heritage of classic cars while adding a modern twist. Combining timeless elegance with sleek, contemporary elements, we created an experience that appeals to both enthusiasts and newcomers.",
+      tags: ["Landing Page", "Mobile App", "Redesign"],
+      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=85",
+      beforeImage: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80",
+      afterImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=85",
+      client: "Formula Vintage Automobilia",
+      timeline: "6 Weeks",
+      role: "Lead Art Director & Product Designer",
+      software: "Figma • Framer • WebGL • After Effects",
+      brief: "The client needed a digital flagship to auction and showcase multimillion-dollar vintage vehicles, requiring prestige typography, interactive 3D rotations, and a seamless VIP bidding app.",
+      solution: "We established a high-contrast editorial system combining bespoke serif titling with ultra-clean monospaced spec sheets and 60fps micro-animations.",
+      hotspots: [
+        { id: "h1", x: "32%", y: "45%", label: "Interactive 3D Engine", desc: "Real-time car configurator with dynamic studio lighting" },
+        { id: "h2", x: "68%", y: "58%", label: "Bespoke Auction Bidding", desc: "Sub-second synchronized bid stream for collectors" }
+      ],
+      gallery: [
+        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=85",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85",
+        "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1600&q=85"
+      ],
+      nextProjectId: "sprey-zest"
+    },
+    {
+      id: "sprey-zest",
+      year: "(2024)",
+      title: "Sprey Zest",
+      shortDescription: "For Sprey Zest, we took a playful, bold approach to packaging and branding. Instead of following the typical fresh or clean aesthetic, we infused energy and personality into every detail, making the product stand out on shelves and bringing a burst of excitement.",
+      tags: ["Website Design", "Branding", "Packaging"],
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1600&q=85",
+      beforeImage: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1600&q=80",
+      afterImage: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1600&q=85",
+      client: "Zest Beverage Co.",
+      timeline: "5 Weeks",
+      role: "Brand Identity & E-commerce Architect",
+      software: "Figma • Shopify Plus • Cinema 4D",
+      brief: "Differentiate an organic sparkling tonic in a crowded supermarket aisle dominated by pale pastel minimalism.",
+      solution: "Engineered high-saturation electric palettes, playful custom wordmarks, and an engaging direct-to-consumer digital store that achieved a 38% conversion surge.",
+      hotspots: [
+        { id: "h1", x: "40%", y: "50%", label: "Custom Typographic Lockup", desc: "Handcrafted bubbly display font optimized for can printing" },
+        { id: "h2", x: "75%", y: "35%", label: "Subscription Portal", desc: "One-click flavor mixing with animated carton checkout" }
+      ],
+      gallery: [
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1600&q=85",
+        "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1600&q=85",
+        "https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=1600&q=85"
+      ],
+      nextProjectId: "super-pro"
+    },
+    {
+      id: "super-pro",
+      year: "(2020)",
+      title: "Super Pro",
+      shortDescription: "For Super-Pro, we redefined what it means to be a professional by focusing on the mindset and determination behind success, not just the achievements. The design highlighted the drive and passion of athletes, creating a bold, empowering experience.",
+      tags: ["Desktop App", "Mobile App", "Analytics"],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=85",
+      beforeImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
+      afterImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=85",
+      client: "Super-Pro Athletics Technologies",
+      timeline: "12 Weeks",
+      role: "Lead UI/UX System Designer",
+      software: "Figma • React • Electron • Tailwind CSS",
+      brief: "Build a cross-platform biometric training analytics platform for elite Olympic athletes and coaches.",
+      solution: "Created high-contrast dark telemetry dashboards with sub-second biometric graphing and offline sync across desktop and mobile devices.",
+      hotspots: [
+        { id: "h1", x: "50%", y: "45%", label: "Real-time Telemetry HUD", desc: "Heart-rate variability and wattage metrics rendered in Canvas" },
+        { id: "h2", x: "25%", y: "65%", label: "Athlete Comparison Deck", desc: "Side-by-side video stroke overlay and force curve" }
+      ],
+      gallery: [
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=85",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=85",
+        "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1600&q=85"
+      ],
+      nextProjectId: "architech-buildings"
+    },
+    {
+      id: "architech-buildings",
+      year: "(2024)",
+      title: "Architech Buildings",
+      shortDescription: "We redefined the concept of modern living by creating a design that challenges conventional boundaries. Focusing on comfort, functionality, and unexpected elements, we transformed the ordinary into something extraordinary.",
+      tags: ["Mobile App", "Branding", "Website Design"],
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85",
       beforeImage: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1600&q=80",
-      afterImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85",
-      floorPlanImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80",
-      location: "Tribeca, New York",
-      area: "3,450 sq ft",
-      client: "Private Client & Interior Studio",
-      turnaround: "4 Business Days",
-      software: "3ds Max • Corona 11 • Photoshop",
-      brief: "The client needed to test how natural southern afternoon daylight reacted with polished micro-cement floors and delicate Italian oak millwork before committing to a $180,000 cabinetry order.",
-      solution: "We calibrated the physical sun coordinates for Greenwich Street at 3:30 PM autumn sun, proving the exact warm illumination bounce across the Travertine stone.",
+      afterImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85",
+      client: "Architech Urban Development",
+      timeline: "8 Weeks",
+      role: "Digital Design Director",
+      software: "Figma • Three.js • Next.js",
+      brief: "Launch a premier leasing and tenant management platform for three new brutalist luxury residential towers in Berlin.",
+      solution: "Engineered interactive 3D floor plan viewers, solar path simulators, and digital resident keys within an elegant minimalist interface.",
       hotspots: [
-        { id: "h1", x: "28%", y: "42%", label: "Curved Fluted Column", desc: "Solid Travertine precision-modeled from CAD elevation" },
-        { id: "h2", x: "65%", y: "55%", label: "Bespoke Oak Credenza", desc: "Integrated hidden 2700K warm LED illumination" },
-        { id: "h3", x: "82%", y: "30%", label: "NYC Skyline Glazing", desc: "Accurately refracted Manhattan daylight study" }
+        { id: "h1", x: "30%", y: "40%", label: "Interactive Unit Selector", desc: "Explore floor levels with live price & sunshine orientation" },
+        { id: "h2", x: "70%", y: "60%", label: "Smart Resident Key", desc: "NFC digital access and private amenities reservation" }
       ],
       gallery: [
-        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85",
         "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=85"
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=85",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85"
       ],
-      nextProjectId: "kyoto-wabi-residence"
+      nextProjectId: "posnen-gallery"
     },
     {
-      id: "kyoto-wabi-residence",
-      year: "(2024)",
-      title: "Kyoto Serenity Primary Suite",
-      shortDescription: "A meditative primary suite retreat integrating tatami-inspired platform beds, lime wash plaster, and Hinoki cedar wood screens.",
-      tags: ["Master Suite", "Japandi", "Luxury Villa"],
-      image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85",
-      beforeImage: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80",
-      afterImage: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85",
-      floorPlanImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80",
-      location: "East Hampton, NY",
-      area: "1,850 sq ft",
-      client: "Custom Home Builder",
-      turnaround: "3 Business Days",
-      software: "3ds Max • V-Ray 6 • Marvelous Designer",
-      brief: "Marketing a ground-up Japandi villa ahead of permit approval, emphasizing organic minimalism, natural linen textures, and indoor-outdoor zen gardens.",
-      solution: "Modeled micro-displacement textures for breathable lime plaster walls and simulated morning light filtering through bamboo foliage.",
+      id: "posnen-gallery",
+      year: "(2022)",
+      title: "Posnen Gallery",
+      shortDescription: "A minimalist digital exhibition and viewing room designed for an avant-garde contemporary art gallery in Copenhagen, focusing on calm pacing and high-resolution spatial rendering.",
+      tags: ["Exhibition", "Web Design", "Art Direction"],
+      image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1600&q=85",
+      beforeImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1600&q=80",
+      afterImage: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1600&q=85",
+      client: "Posnen Contemporary",
+      timeline: "4 Weeks",
+      role: "Lead Digital Designer",
+      software: "Figma • SvelteKit • WebGL",
+      brief: "Present digital artworks and sculptures in a serene, distraction-free environment that mirrors the physical gallery experience.",
+      solution: "Created an ambient monochromatic viewing room with subtle spatial audio and infinite smooth canvas panning.",
       hotspots: [
-        { id: "h1", x: "35%", y: "60%", label: "Low-Profile Platform", desc: "Solid timber floating frame with concealed underglow" },
-        { id: "h2", x: "70%", y: "40%", label: "Limewashed Micro-texture", desc: "4K displacement map reproducing artisan trowel marks" }
+        { id: "h1", x: "45%", y: "50%", label: "Artwork Viewing Room", desc: "Calibrated color profiles for faithful reproduction" }
       ],
       gallery: [
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1600&q=85"
+        "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1600&q=85",
+        "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1600&q=85"
       ],
-      nextProjectId: "monolithic-chef-kitchen"
+      nextProjectId: "fringe-sports"
     },
     {
-      id: "monolithic-chef-kitchen",
-      year: "(2024)",
-      title: "Monolithic Calacatta Chef's Kitchen",
-      shortDescription: "A sculptural architectural kitchen centered around a 14-foot bookmatched Calacatta Viola marble island and recessed oak cabinetry.",
-      tags: ["Kitchen", "Custom Millwork", "Contemporary"],
-      image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=85",
-      beforeImage: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80",
-      afterImage: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=85",
-      floorPlanImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80",
-      location: "SoHo, New York",
-      area: "920 sq ft",
-      client: "Private Homeowner",
-      turnaround: "3 Business Days",
-      software: "3ds Max • Corona 11 • Substance 3D",
-      brief: "The homeowner was hesitant between two dramatic marble slab options costing $45,000 each. Our renders previewed the exact continuous waterfall vein alignments.",
-      solution: "Produced sub-surface scattering lighting tests that proved the dark burgundy veining provided ideal visual weight against smoked thermo-oak.",
-      hotspots: [
-        { id: "h1", x: "48%", y: "58%", label: "Bookmatched Island", desc: "Full stone slab mapping with continuous waterfall edge" },
-        { id: "h2", x: "20%", y: "45%", label: "Concealed Bar Backsplash", desc: "Warm indirect cove illumination at 2700K" }
-      ],
-      gallery: [
-        "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1600&q=85"
-      ],
-      nextProjectId: "soho-boutique-atelier"
-    },
-    {
-      id: "soho-boutique-atelier",
+      id: "fringe-sports",
       year: "(2023)",
-      title: "Couture Flagship Atelier & Lounge",
-      shortDescription: "A high-concept commercial retail space blending historic cast-iron columns with curvilinear acoustic felt displays and spotlighting.",
-      tags: ["Commercial", "Retail Flagship", "Hospitality"],
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85",
-      beforeImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80",
-      afterImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85",
-      floorPlanImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80",
-      location: "SoHo Cast Iron District, NY",
-      area: "4,800 sq ft",
-      client: "Commercial Retail Developer",
-      turnaround: "5 Business Days",
-      software: "3ds Max • Corona • Unreal Engine 5",
-      brief: "Securing an international fashion anchor tenant before interior construction commenced.",
-      solution: "Delivered 12 ultra-high resolution marketing renders and an interactive VR walkthrough that closed the lease within 14 days.",
+      title: "Fringe Sports",
+      shortDescription: "For Fringe Sports, we built an immersive desktop and mobile app pairing live athletic broadcasts with community predictions and interactive stats.",
+      tags: ["Desktop App", "Entertainment", "UI System"],
+      image: "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1600&q=85",
+      beforeImage: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=80",
+      afterImage: "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1600&q=85",
+      client: "Fringe Media Group",
+      timeline: "7 Weeks",
+      role: "Product & Motion Designer",
+      software: "Figma • Framer Motion • WebSockets",
+      brief: "Combine streaming video feeds with live fantasy picks into a single responsive pane without screen clutter.",
+      solution: "Constructed modular layout cards that fluidly dock, expand, and shift based on live game events and user focus.",
       hotspots: [
-        { id: "h1", x: "32%", y: "40%", label: "Cast Iron Column", desc: "Digitally scanned original historic 1902 structure" },
-        { id: "h2", x: "68%", y: "52%", label: "Curved Display Plinth", desc: "Hand-cast pigmented concrete with recessed base" }
+        { id: "h1", x: "55%", y: "40%", label: "Live Event Stream", desc: "Zero-latency synchronization with interactive chat overlays" }
       ],
       gallery: [
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=85"
+        "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1600&q=85",
+        "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=85"
       ],
-      nextProjectId: "scandinavian-spa-bath"
-    },
-    {
-      id: "scandinavian-spa-bath",
-      year: "(2023)",
-      title: "Nordic Minimalist Primary Spa Bath",
-      shortDescription: "A restorative master ensuite bathroom with a sculpted matte composite soaking tub, cedar slatted sauna, and skylight daylight.",
-      tags: ["Bathroom", "Spa Ensuite", "Warm Scandinavian"],
-      image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=85",
-      beforeImage: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80",
-      afterImage: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=85",
-      floorPlanImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80",
-      location: "West Village, NY",
-      area: "460 sq ft",
-      client: "Interior Design Studio",
-      turnaround: "2 Business Days",
-      software: "3ds Max • Corona Renderer • Photoshop",
-      brief: "Verifying skylight angle to ensure ambient illumination without excessive glare on polished micro-cement surfaces.",
-      solution: "Rendered seasonal solar sun paths showing soft overcast natural morning illumination across all 4 seasons.",
-      hotspots: [
-        { id: "h1", x: "44%", y: "52%", label: "Solid Core Tub", desc: "Matte white composite with floor-mounted brass filler" },
-        { id: "h2", x: "78%", y: "35%", label: "Diffused Skylight", desc: "Simulated 6500K overcast daylight filtration" }
-      ],
-      gallery: [
-        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1600&q=85"
-      ],
-      nextProjectId: "tribeca-penthouse"
+      nextProjectId: "formula-vintage"
     }
   ],
 
-  // --- // TESTIMONIALS (Slider with Counter "01 / 03") ---
+  // --- // RECOGNITION AND AWARDS (Alexfolio Core Section) ---
+  awards: [
+    { num: "01", project: "Vibrent", award: "Site of the Day (SOTD)", platform: "Awwwards", year: "2024" },
+    { num: "02", project: "CoSpace", award: "Honorable Mention", platform: "Awwwards", year: "2024" },
+    { num: "03", project: "Farouk & Brown", award: "Dribbble Weekly Picks", platform: "Dribbble", year: "2023" },
+    { num: "04", project: "Bio Sun", award: "Site of the Day (FWA)", platform: "FWA", year: "2023" },
+    { num: "05", project: "Info Gear", award: "Best UI / UX Innovation", platform: "CSSDA", year: "2023" },
+    { num: "06", project: "No Code Mate", award: "Design Innovation Award", platform: "Framer Awards", year: "2022" }
+  ],
+
+  // --- // TESTIMONIALS (Alexfolio /03 Sticky Scroll Carousel) ---
   testimonials: [
     {
       id: "t1",
-      count: "01",
-      total: "03",
-      author: "Elena Vance",
-      role: "Principal Interior Designer",
-      firm: "Vance & Co. Interiors, New York",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
-      quote: "Before working with this studio, our clients constantly struggled to visualize custom joinery and marble slabs from flat CAD drawings. Their photorealistic renders closed a $1.2M penthouse contract on the first presentation. The lighting fidelity is uncanny."
+      num: "01",
+      quote: "His keen eye for detail and innovative approach impressed our team, turning challenges into creative solutions that set him apart.",
+      name: "Maya Lopez",
+      role: "CEO",
+      company: "Fundwizz",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      rating: 5
     },
     {
       id: "t2",
-      count: "02",
-      total: "03",
-      author: "Marcus Thorne",
-      role: "Managing Director & Builder",
-      firm: "Apex Luxury Developments",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80",
-      quote: "We pre-sold 6 out of 8 luxury townhomes 5 months before structural framing was completed, solely using their 3D interior renders and virtual tours. The ROI was more than 40x our rendering investment."
+      num: "02",
+      quote: "With a unique blend of creativity and precision, he brought fresh perspectives that drove meaningful results.",
+      name: "Ray Brown",
+      role: "Head of Product",
+      company: "ISO",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+      rating: 5
     },
     {
       id: "t3",
-      count: "03",
-      total: "03",
-      author: "David & Sarah Lin",
-      role: "Private Homeowners",
-      firm: "Greenwich Residence",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
-      quote: "We were terrified of making an expensive mistake with our open kitchen and double-height ceiling lighting. The 3D render showed us that our original lighting layout was way too dark over the island. That single catch saved us over $14,000 in electrical re-wiring!"
+      num: "03",
+      quote: "His strong problem-solving skills and dedication to excellence consistently elevated our projects, making a lasting impact on the team.",
+      name: "George Jones",
+      role: "Product Manager",
+      company: "Gliss",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+      rating: 5
     }
   ],
 
-  // --- FOOTER "REACH OUT" ---
-  reachOut: {
-    heading: "Reach Out —",
-    subheading: "Tell us about your space. We'll turn your floor plans into photorealism.",
-    email: "hello@studioverse.design",
-    phone: "+1 (212) 847-9200",
-    address: "482 Broome Street, SoHo, New York, NY 10013"
+  // --- // REACH OUT (Contact Section) ---
+  contact: {
+    headline: "Reach Out —",
+    subtext: "Tell me about your idea. I’ll take it from there.",
+    officeLabel: "Office:",
+    officeValue: "Ozeanblickstraße, Berlin 10115, Germany",
+    mailLabel: "Mail:",
+    mailValue: "hello@alexgraham.com",
+    phoneLabel: "Phone:",
+    phoneValue: "+49 30 12345678"
   }
 };

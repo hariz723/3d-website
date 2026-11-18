@@ -57,13 +57,13 @@ export function renderCustomizerDrawer() {
           <!-- BRAND COLOR PRESETS -->
           <div>
             <label class="block text-xs uppercase tracking-wider font-semibold text-white mb-2">
-              Lovera Palette Presets
+              Alexfolio Palette Presets
             </label>
             <div class="grid grid-cols-2 gap-2 text-xs">
-              <button class="palette-preset-btn p-3 border border-[#232525] rounded-2xl text-left hover:border-[#FF531F] transition-colors cursor-pointer bg-[#141515]" data-accent="#FF531F">
+              <button class="palette-preset-btn p-3 border border-[#232525] rounded-2xl text-left hover:border-[#FF442B] transition-colors cursor-pointer bg-[#141515]" data-accent="#FF442B">
                 <div class="flex items-center gap-2 mb-1">
-                  <span class="w-4 h-4 rounded-full" style="background: #FF531F;"></span>
-                  <span class="font-bold text-white text-xs">Lovera Flame</span>
+                  <span class="w-4 h-4 rounded-full" style="background: #FF442B;"></span>
+                  <span class="font-bold text-white text-xs">Alexfolio Vermilion</span>
                 </div>
                 <span class="text-[10px] text-[#8E9593]">Signature Orange</span>
               </button>

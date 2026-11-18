@@ -47,7 +47,7 @@ export function renderProjectDetailPage(projectId) {
           </p>
         </div>
 
-        <!-- SPECS CARD -->
+        <!-- SPECS CARD (Alexfolio) -->
         <div class="lg:col-span-4 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-3xl p-6 space-y-4 shadow-xl">
           <h4 class="text-xs uppercase font-mono tracking-widest font-bold text-[var(--color-text)] border-b border-[var(--color-border)] pb-2">
             // Project Specifications
@@ -55,23 +55,23 @@ export function renderProjectDetailPage(projectId) {
           <div class="text-xs space-y-2.5 font-mono">
             <div class="flex justify-between">
               <span class="text-[var(--color-text-muted)]">Client:</span>
-              <span class="font-bold text-[var(--color-text)]">${project.client}</span>
+              <span class="font-bold text-[var(--color-text)]">${project.client || 'Confidential'}</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-[var(--color-text-muted)]">Total Area:</span>
-              <span class="font-bold text-[var(--color-text)]">${project.area}</span>
+              <span class="text-[var(--color-text-muted)]">Role:</span>
+              <span class="font-bold text-[var(--color-text)]">${project.role || 'Design & Strategy'}</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-[var(--color-text-muted)]">Turnaround:</span>
-              <span class="font-bold text-[#FF531F]">${project.turnaround}</span>
+              <span class="text-[var(--color-text-muted)]">Timeline:</span>
+              <span class="font-bold text-[var(--color-accent)]">${project.timeline || project.turnaround || 'Ongoing'}</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-[var(--color-text-muted)]">Software:</span>
-              <span class="text-[11px] text-[var(--color-text)]">${project.software}</span>
+              <span class="text-[var(--color-text-muted)]">Tools / Stack:</span>
+              <span class="text-[11px] text-[var(--color-text)]">${project.software || 'Figma • Framer'}</span>
             </div>
           </div>
-          <button id="project-quote-btn" type="button" class="w-full mt-2 py-3 bg-[#FF531F] hover:bg-[#E04212] text-black text-xs font-bold uppercase tracking-wider rounded-full transition-all cursor-pointer flex items-center justify-center gap-2 shadow-lg">
-            <span>Quote Similar Space</span>
+          <button id="project-quote-btn" type="button" class="w-full mt-2 py-3 bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] text-black text-xs font-bold uppercase font-mono tracking-wider rounded-full transition-all cursor-pointer flex items-center justify-center gap-2 shadow-lg">
+            <span>Inquire About Similar Project</span>
             ${renderIcon('arrowRight', 'w-3.5 h-3.5')}
           </button>
         </div>

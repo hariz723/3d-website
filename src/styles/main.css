@@ -2,29 +2,29 @@
 
 @layer base {
   :root {
-    --color-bg: #0A0B0B;
-    --color-surface: #121313;
-    --color-surface-hover: #181919;
-    --color-border: #222424;
-    --color-text: #F3F4F4;
-    --color-text-muted: #8A8F8E;
-    --color-accent: #FF531F;
-    --color-accent-hover: #E04212;
-    --font-heading: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
+    --color-bg: #121111;
+    --color-surface: #181717;
+    --color-surface-hover: #222020;
+    --color-border: #262424;
+    --color-text: #FAFAFA;
+    --color-text-muted: #A7A0A0;
+    --color-accent: #FF442B;
+    --color-accent-hover: #E03822;
+    --font-heading: 'Instrument Sans', 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-sans: 'Inter', system-ui, sans-serif;
-    --font-mono: 'DM Mono', monospace;
+    --font-mono: 'JetBrains Mono', 'DM Mono', monospace;
   }
 
-  /* Light Theme Variant (if switched) */
+  /* Light Theme Variant (Alexfolio High-Contrast Light) */
   [data-theme="light"] {
-    --color-bg: #F8F7F4;
+    --color-bg: #FAF9F6;
     --color-surface: #FFFFFF;
     --color-surface-hover: #F2EFEA;
-    --color-border: #E5E1D8;
-    --color-text: #111212;
-    --color-text-muted: #6E7271;
-    --color-accent: #FF531F;
-    --color-accent-hover: #E04212;
+    --color-border: #E8E4DC;
+    --color-text: #121111;
+    --color-text-muted: #6E6868;
+    --color-accent: #FF442B;
+    --color-accent-hover: #E03822;
   }
 
   body {
@@ -39,28 +39,27 @@
 
   h1, h2, h3, h4, .font-heading {
     font-family: var(--font-heading);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
     font-weight: 800;
   }
 
   .font-mono-tag {
     font-family: var(--font-mono);
-    font-style: italic;
     letter-spacing: 0.05em;
   }
 }
 
 /* Minimal Sticky Header */
 .header-glass {
-  background: rgba(10, 11, 11, 0.85);
+  background: rgba(18, 17, 17, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 [data-theme="light"] .header-glass {
-  background: rgba(248, 247, 244, 0.85);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(250, 249, 246, 0.88);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /* Floating Project Hover Card (Alexfolio Mouse Follower) */
@@ -68,8 +67,8 @@
   position: fixed;
   pointer-events: none;
   z-index: 45;
-  width: 380px;
-  height: 250px;
+  width: 400px;
+  height: 260px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.15);
@@ -82,6 +81,43 @@
 #project-cursor-preview.active {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
+}
+
+/* Custom Interactive Cursor Morphing */
+#cursor-ring.cursor-mode-link {
+  width: 54px;
+  height: 54px;
+  border-color: var(--color-accent);
+  background-color: rgba(255, 68, 43, 0.16);
+  backdrop-filter: blur(2px);
+}
+
+#cursor-ring.cursor-mode-project {
+  width: 82px;
+  height: 82px;
+  border-color: var(--color-accent);
+  background-color: rgba(255, 68, 43, 0.22);
+  backdrop-filter: blur(4px);
+}
+
+#cursor-ring.cursor-mode-scroll {
+  width: 88px;
+  height: 88px;
+  border-color: var(--color-accent);
+  background-color: rgba(255, 68, 43, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+#cursor-ring.cursor-mode-drag {
+  width: 80px;
+  height: 80px;
+  border-color: var(--color-accent);
+  background-color: rgba(255, 68, 43, 0.22);
+  backdrop-filter: blur(4px);
+}
+
+#cursor-ring.cursor-mode-down {
+  transform: translate(-50%, -50%) scale(0.82) !important;
 }
 
 /* Bulletproof Before/After Slider */
@@ -101,7 +137,7 @@
   cursor: ew-resize;
   z-index: 25;
   transform: translateX(-50%);
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.8), 0 0 8px rgba(255, 83, 31, 0.6);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.8), 0 0 8px rgba(255, 68, 43, 0.6);
 }
 
 .ba-handle-button {
@@ -112,7 +148,7 @@
   width: 42px;
   height: 42px;
   border-radius: 9999px;
-  background: #0A0B0B;
+  background: #121111;
   border: 2px solid #FFFFFF;
   display: flex;
   align-items: center;

@@ -81,10 +81,12 @@ export function initScrollLetterHighlight() {
     let globalCharIndex = 0;
 
     container.innerHTML = words.map(word => {
-      const isAccentWord = word.toLowerCase().includes('photoreal') || 
-                           word.toLowerCase().includes('interiors') || 
-                           word.toLowerCase().includes('precision') ||
-                           word.toLowerCase().includes('built');
+      const isAccentWord = word.toLowerCase().includes('branding') || 
+                           word.toLowerCase().includes('apps') || 
+                           word.toLowerCase().includes('websites') ||
+                           word.toLowerCase().includes('scalable') ||
+                           word.toLowerCase().includes('systems') ||
+                           word.toLowerCase().includes('vision');
 
       const lettersHtml = word.split('').map(char => {
         const span = `<span class="scroll-char inline-block transition-colors duration-75" data-char-idx="${globalCharIndex}" data-accent="${isAccentWord}">${char}</span>`;
@@ -172,11 +174,12 @@ function updateSectionSpy() {
     if (rect.top <= vh * 0.4 && rect.bottom >= vh * 0.1) {
       const id = sec.id;
       if (id === 'hero') currentSection = '// 01 HERO';
-      else if (id === 'intro') currentSection = '// 02 INTRO';
+      else if (id === 'about' || id === 'intro') currentSection = '// 02 INTRO';
       else if (id === 'services') currentSection = '// 03 SERVICES';
-      else if (id === 'projects') currentSection = '// 04 PROJECTS';
-      else if (id === 'testimonials') currentSection = '// 05 REVIEWS';
-      else if (id === 'contact') currentSection = '// 06 REACH OUT';
+      else if (id === 'projects') currentSection = '// 04 WORK INDEX';
+      else if (id === 'awards') currentSection = '// 05 AWARDS';
+      else if (id === 'testimonials') currentSection = '// 06 TESTIMONIALS';
+      else if (id === 'contact') currentSection = '// 07 REACH OUT';
     }
   });
 

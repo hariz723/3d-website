@@ -7,22 +7,23 @@
  */
 
 export const siteConfig = {
-  // --- STUDIO & FOUNDER IDENTITY ---
+  // --- COMPANY & BRAND IDENTITY ---
   studio: {
-    name: "Alex Design & Strategy",
-    founderName: "Alex Graham",
-    roles: ["Web Designer", "Art Director"],
-    city: "Berlin",
-    country: "Germany",
-    address: "Ozeanblickstraße, Berlin 10115, Germany",
-    secondaryAddress: "482 Broome Street, SoHo, New York, NY 10013",
-    email: "hello@alexgraham.com",
-    phone: "+49 30 12345678",
-    phoneDisplay: "+49 30 12345678",
-    whatsappNumber: "493012345678",
-    whatsappDefaultMessage: "Hi Alex! I reviewed your portfolio and would like to discuss a new design and development project.",
-    turnaround: "Rapid sprint turnarounds with design system delivery",
-    revisions: "Iterative sprints & collaborative Figma / Framer handoffs",
+    name: "Vesaree Technologies",
+    legalName: "Vesaree Technologies Pvt. Ltd.",
+    founderName: "Vesaree Technologies",
+    roles: ["AI Automation & Growth", "Software & SaaS Engineering"],
+    city: "India",
+    country: "India",
+    address: "India + Global",
+    secondaryAddress: "",
+    email: "vesareetechnologies@gmail.com",
+    phone: "+91 76908 90896",
+    phoneDisplay: "+91 76908 90896",
+    whatsappNumber: "917690890896",
+    whatsappDefaultMessage: "Hello Vesaree Technologies, I would like to discuss a project.",
+    turnaround: "Startup-friendly delivery built around your business",
+    revisions: "Clear scope, milestones and collaborative delivery",
   },
 
   // --- BRAND COLORS & THEME ---
@@ -37,12 +38,11 @@ export const siteConfig = {
     textLight: "#121111",
   },
 
-  // --- SOCIAL PROFILES ---
+  // --- DIRECT CHANNELS & LINKS ---
   socialLinks: [
-    { name: "Linkedin", url: "https://linkedin.com", handle: "linkedin.com/in/alexgraham" },
-    { name: "Twitter", url: "https://twitter.com", handle: "@alexgraham_ds" },
-    { name: "Instagram", url: "https://instagram.com", handle: "@alexgraham.design" },
-    { name: "Dribbble", url: "https://dribbble.com", handle: "dribbble.com/alexgraham" }
+    { name: "WhatsApp", url: "https://wa.me/917690890896", handle: "+91 76908 90896" },
+    { name: "Email", url: "mailto:vesareetechnologies@gmail.com", handle: "vesareetechnologies@gmail.com" },
+    { name: "Website", url: "https://vesaree-technologies.vercel.app/", handle: "vesaree-technologies.vercel.app" }
   ],
 
   // --- ASYMMETRIC HERO SHOWCASE IMAGERY (Alexfolio) ---
@@ -66,9 +66,9 @@ export const siteConfig = {
   // --- // INTRO SECTION ---
   intro: {
     label: "// Intro",
-    headline: "Bringing your vision to life quickly and efficiently—whether it's branding, apps, or websites—I've got it covered, delivering smooth and effective solutions from start to finish.",
-    subtext: "Not just about aesthetics, but about developing logical, scalable design systems that are precisely tailored to the web and app application.",
-    ctaText: "See my Work",
+    headline: "Build smarter. Automate faster. Grow bigger.",
+    subtext: "Practical AI solutions, business automation and custom software — helping ambitious businesses in India and worldwide move forward without enterprise-sized budgets.",
+    ctaText: "See our Work",
     ctaTarget: "#projects"
   },
 
@@ -212,7 +212,7 @@ export const siteConfig = {
       shortDescription: "We redefined the concept of modern living by creating a design that challenges conventional boundaries. Focusing on comfort, functionality, and unexpected elements, we transformed the ordinary into something extraordinary.",
       tags: ["Mobile App", "Branding", "Website Design"],
       image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85",
-      beforeImage: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1600&q=80",
+      beforeImage: "https://images.unsplash.com/photo-1641923599291-8fa80dfb5728?auto=format&fit=crop&w=1600&q=80",
       afterImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85",
       client: "Architech Urban Development",
       timeline: "8 Weeks",
@@ -251,7 +251,7 @@ export const siteConfig = {
       ],
       gallery: [
         "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1600&q=85"
+        "https://images.unsplash.com/photo-1770299302060-c61d67591d69?auto=format&fit=crop&w=1600&q=85"
       ],
       nextProjectId: "fringe-sports"
     },
@@ -261,9 +261,9 @@ export const siteConfig = {
       title: "Fringe Sports",
       shortDescription: "For Fringe Sports, we built an immersive desktop and mobile app pairing live athletic broadcasts with community predictions and interactive stats.",
       tags: ["Desktop App", "Entertainment", "UI System"],
-      image: "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1600&q=85",
-      beforeImage: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=80",
-      afterImage: "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1600&q=85",
+      image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=85",
+      beforeImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
+      afterImage: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=85",
       client: "Fringe Media Group",
       timeline: "7 Weeks",
       role: "Product & Motion Designer",
@@ -274,8 +274,8 @@ export const siteConfig = {
         { id: "h1", x: "55%", y: "40%", label: "Live Event Stream", desc: "Zero-latency synchronization with interactive chat overlays" }
       ],
       gallery: [
-        "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=85"
+        "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=85",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=85"
       ],
       nextProjectId: "formula-vintage"
     }
@@ -328,12 +328,12 @@ export const siteConfig = {
   // --- // REACH OUT (Contact Section) ---
   contact: {
     headline: "Reach Out —",
-    subtext: "Tell me about your idea. I’ll take it from there.",
-    officeLabel: "Office:",
-    officeValue: "Ozeanblickstraße, Berlin 10115, Germany",
-    mailLabel: "Mail:",
-    mailValue: "hello@alexgraham.com",
-    phoneLabel: "Phone:",
-    phoneValue: "+49 30 12345678"
+    subtext: "Tell us about your business challenge or product idea. We'll help you explore a practical way forward.",
+    officeLabel: "Service Reach:",
+    officeValue: "India + Global",
+    mailLabel: "Email:",
+    mailValue: "vesareetechnologies@gmail.com",
+    phoneLabel: "WhatsApp / Phone:",
+    phoneValue: "+91 76908 90896"
   }
 };

@@ -22,12 +22,12 @@ import { renderAboutPage, initAboutPageEvents } from './pages/AboutPage.js';
 import { renderContactPage, initContactPageEvents } from './pages/ContactPage.js';
 
 function updateSEOMeta() {
-  const title = `TD_Alexfolio — ${siteConfig.studio.founderName} | Portfolio & Creative Direction`;
+  const title = `${siteConfig.studio.name} | Build Smarter. Grow Bigger.`;
   document.title = title;
 
   const descMeta = document.querySelector('meta[name="description"]');
   if (descMeta) {
-    descMeta.setAttribute('content', `Alexfolio is a bold, high-impact portfolio template built for creatives, digital designers, product designers, art directors, and agencies.`);
+    descMeta.setAttribute('content', `Vesaree Technologies — AI automation, lead generation and software development for businesses in India and worldwide.`);
   }
 
   // Update JSON-LD structured data
@@ -35,19 +35,10 @@ function updateSEOMeta() {
   if (jsonLdScript) {
     const schemaData = {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": siteConfig.studio.founderName,
-      "jobTitle": siteConfig.studio.roles.join(' & '),
-      "worksFor": {
-        "@type": "Organization",
-        "name": siteConfig.studio.name
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": siteConfig.studio.address,
-        "addressLocality": siteConfig.studio.city,
-        "addressCountry": "DE"
-      },
+      "@type": "Organization",
+      "name": siteConfig.studio.legalName || siteConfig.studio.name,
+      "description": siteConfig.intro.subtext,
+      "areaServed": siteConfig.contact.officeValue,
       "telephone": siteConfig.studio.phone,
       "email": siteConfig.studio.email,
       "url": window.location.origin

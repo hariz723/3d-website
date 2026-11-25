@@ -46,17 +46,21 @@ export function renderQuoteFormHtml(formId = 'standalone-quote-form') {
           <div class="flex-1 space-y-2">
             <h4 class="font-heading text-2xl font-bold uppercase text-[var(--color-text)]">Message Delivered!</h4>
             <p class="text-xs text-[var(--color-text-muted)]">
-              Thank you for reaching out. I will review your requirements and respond with a project proposal and timeline within 24 hours.
+              Thank you for reaching out to ${siteConfig.studio.name}. Our team will review your requirements and respond shortly.
             </p>
             <div class="p-4 bg-[var(--color-bg)] rounded-xl border border-[var(--color-border)] text-xs space-y-1 font-mono">
-              <div><strong class="text-[var(--color-text)]">Project Ref:</strong> <span class="text-[var(--color-accent)] font-bold" id="${formId}-ref-code">#AG-2024</span></div>
-              <div><strong class="text-[var(--color-text)]">Studio:</strong> ${siteConfig.studio.name} (${siteConfig.studio.city})</div>
+              <div><strong class="text-[var(--color-text)]">Project Ref:</strong> <span class="text-[var(--color-accent)] font-bold" id="${formId}-ref-code">#VT-${new Date().getFullYear()}</span></div>
+              <div><strong class="text-[var(--color-text)]">Company:</strong> ${siteConfig.studio.legalName || siteConfig.studio.name} (${siteConfig.contact.officeValue})</div>
               <div><strong class="text-[var(--color-text)]">Direct Email:</strong> ${siteConfig.contact.mailValue}</div>
+              <div><strong class="text-[var(--color-text)]">WhatsApp / Phone:</strong> ${siteConfig.contact.phoneValue}</div>
             </div>
             <div class="pt-2 flex flex-wrap gap-3">
               <button type="button" onclick="location.reload()" class="px-5 py-2.5 bg-[var(--color-accent)] text-black text-xs font-bold uppercase font-mono tracking-wider rounded-full shadow-lg">
                 Done
               </button>
+              <a href="https://wa.me/${siteConfig.studio.whatsappNumber}?text=${encodeURIComponent(siteConfig.studio.whatsappDefaultMessage)}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text)] text-xs font-bold uppercase font-mono tracking-wider rounded-full hover:border-[var(--color-accent)] transition-colors">
+                Continue on WhatsApp ↗
+              </a>
             </div>
           </div>
         </div>
@@ -70,19 +74,19 @@ export function renderQuoteFormHtml(formId = 'standalone-quote-form') {
             <label class="block text-xs uppercase tracking-wider font-mono font-semibold text-[var(--color-text)] mb-1.5">
               Your Name <span class="text-[var(--color-accent)]">*</span>
             </label>
-            <input type="text" name="name" required placeholder="e.g. Maya Lopez" class="w-full px-3.5 py-2.5 text-xs bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl focus:outline-none focus:border-[var(--color-accent)] text-[var(--color-text)] placeholder-[var(--color-text-muted)]">
+            <input type="text" name="name" required placeholder="e.g. Full name" class="w-full px-3.5 py-2.5 text-xs bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl focus:outline-none focus:border-[var(--color-accent)] text-[var(--color-text)] placeholder-[var(--color-text-muted)]">
           </div>
           <div>
             <label class="block text-xs uppercase tracking-wider font-mono font-semibold text-[var(--color-text)] mb-1.5">
               Email Address <span class="text-[var(--color-accent)]">*</span>
             </label>
-            <input type="email" name="email" required placeholder="e.g. maya@company.com" class="w-full px-3.5 py-2.5 text-xs bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl focus:outline-none focus:border-[var(--color-accent)] text-[var(--color-text)] placeholder-[var(--color-text-muted)]">
+            <input type="email" name="email" required placeholder="e.g. you@company.com" class="w-full px-3.5 py-2.5 text-xs bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl focus:outline-none focus:border-[var(--color-accent)] text-[var(--color-text)] placeholder-[var(--color-text-muted)]">
           </div>
           <div>
             <label class="block text-xs uppercase tracking-wider font-mono font-semibold text-[var(--color-text)] mb-1.5">
               Phone / WhatsApp
             </label>
-            <input type="tel" name="phone" placeholder="e.g. +49 170 1234567" class="w-full px-3.5 py-2.5 text-xs bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl focus:outline-none focus:border-[var(--color-accent)] text-[var(--color-text)] placeholder-[var(--color-text-muted)]">
+            <input type="tel" name="phone" placeholder="e.g. +91 98765 43210" class="w-full px-3.5 py-2.5 text-xs bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl focus:outline-none focus:border-[var(--color-accent)] text-[var(--color-text)] placeholder-[var(--color-text-muted)]">
           </div>
         </div>
 
@@ -109,7 +113,7 @@ export function renderQuoteFormHtml(formId = 'standalone-quote-form') {
         <!-- STEP 3: DETAILS -->
         <div>
           <label class="block text-xs uppercase tracking-wider font-mono font-semibold text-[var(--color-text)] mb-1.5">
-            Tell me about your idea <span class="text-[var(--color-accent)]">*</span>
+            Tell us about your idea <span class="text-[var(--color-accent)]">*</span>
           </label>
           <textarea name="notes" rows="4" required placeholder="Describe your product, timeline, current stage, or specific goals..." class="w-full px-3.5 py-2.5 text-xs bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl focus:outline-none focus:border-[var(--color-accent)] text-[var(--color-text)] placeholder-[var(--color-text-muted)] leading-relaxed"></textarea>
         </div>

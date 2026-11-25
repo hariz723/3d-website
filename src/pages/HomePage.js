@@ -83,7 +83,7 @@ export function renderHomePage() {
           <span class="font-mono text-xs uppercase tracking-widest text-[var(--color-accent)] font-bold">
             ${siteConfig.intro.label}
           </span>
-          <span class="font-mono text-[11px] text-[var(--color-text-muted)]">Digital Designer & Art Director</span>
+          <span class="font-mono text-[11px] text-[var(--color-text-muted)]">${siteConfig.studio.roles.join(' & ')}</span>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">

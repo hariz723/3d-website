@@ -113,14 +113,14 @@ export function initFloorPlanEvents(project) {
 
   if (viewBtn) {
     viewBtn.onclick = () => {
-      const img = project.gallery[activeIndex % project.gallery.length] || project.coverImage;
+      const img = project.gallery[activeIndex % project.gallery.length] || project.image;
       appState.openLightbox([img], 0, `${project.title} - ${project.hotspots[activeIndex]?.label || 'Perspective'}`);
     };
   }
 
   if (cadBtn) {
     cadBtn.onclick = () => {
-      appState.openLightbox([project.floorPlanImage || project.coverImage], 0, `${project.title} - Architectural CAD Layout`);
+      appState.openLightbox([project.floorPlanImage || project.image], 0, `${project.title} - Architectural CAD Layout`);
     };
   }
 }

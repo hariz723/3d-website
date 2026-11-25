@@ -33,9 +33,11 @@ export function renderProjectDetailPage(projectId) {
             <span class="px-3 py-1 text-xs font-mono uppercase bg-[var(--color-surface)] border border-[var(--color-border)] text-[#FF531F] font-bold rounded-lg">
               ${project.year}
             </span>
-            <span class="text-xs text-[var(--color-text-muted)] font-mono px-2 py-0.5 bg-[var(--color-surface)] rounded-lg border border-[var(--color-border)]">
-              ${project.location}
-            </span>
+            ${(project.tags || []).map(tag => `
+              <span class="text-xs text-[var(--color-text-muted)] font-mono px-2 py-0.5 bg-[var(--color-surface)] rounded-lg border border-[var(--color-border)]">
+                ${tag}
+              </span>
+            `).join('')}
           </div>
 
           <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-black uppercase text-[var(--color-text)] tracking-tight leading-none">

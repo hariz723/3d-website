@@ -9,36 +9,36 @@ export function renderAboutPage() {
       <!-- HERO -->
       <div class="space-y-6 border-b border-[var(--color-border)] pb-12">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-[11px] font-mono uppercase tracking-widest text-[var(--color-text-muted)]">
-          <span>About Alex Graham</span>
+          <span>About ${siteConfig.studio.name}</span>
           <span>•</span>
-          <span class="text-[var(--color-accent)] font-bold">Design & Strategy</span>
+          <span class="text-[var(--color-accent)] font-bold">Your Technology & Growth Partner</span>
         </div>
         <h1 class="font-heading text-5xl sm:text-7xl lg:text-9xl font-black text-[var(--color-text)] tracking-tight leading-[0.88] uppercase">
-          Alex Graham —
+          ${siteConfig.studio.name} —
         </h1>
         <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 font-mono text-xs sm:text-sm text-[var(--color-text-muted)] uppercase tracking-wider">
           <div class="text-[var(--color-text)] font-bold">// ${siteConfig.studio.roles[0]} & ${siteConfig.studio.roles[1]}</div>
-          <div>// Based in ${siteConfig.studio.city} & Available Worldwide</div>
+          <div>// Serving ${siteConfig.contact.officeValue}</div>
         </div>
       </div>
 
       <!-- STORY & IMAGE -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         <div class="lg:col-span-6 rounded-2xl overflow-hidden border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl">
-          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1600&q=85" alt="Alex Graham Atelier" class="w-full h-full object-cover">
+          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1600&q=85" alt="${siteConfig.studio.name}" class="w-full h-full object-cover">
         </div>
         
         <div class="lg:col-span-6 space-y-8">
           <div class="space-y-4">
-            <span class="font-mono text-xs uppercase tracking-widest text-[var(--color-accent)] font-bold">// Philosophy</span>
+            <span class="font-mono text-xs uppercase tracking-widest text-[var(--color-accent)] font-bold">// Why Vesaree</span>
             <h2 class="font-heading text-3xl sm:text-5xl text-[var(--color-text)] uppercase font-black leading-tight">
-              Design Systems That Scale With Ambition.
+              Big Ideas Deserve Accessible Technology.
             </h2>
             <p class="text-sm sm:text-base text-[var(--color-text-muted)] leading-relaxed">
-              Bringing your vision to life quickly and efficiently—whether it's branding, apps, or websites—I've got it covered, delivering smooth and effective solutions from start to finish.
+              We believe businesses of every size should be able to use modern AI and software to compete, serve customers better and grow efficiently. Our focus is practical solutions, clear communication and cost-conscious delivery.
             </p>
             <p class="text-sm sm:text-base text-[var(--color-text-muted)] leading-relaxed">
-              Not just about aesthetics, but about developing logical, scalable design systems that are precisely tailored to the web and app application.
+              Whether you are launching a startup, improving an established business or developing a SaaS idea, we help you take the next step.
             </p>
           </div>
 

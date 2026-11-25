@@ -34,13 +34,13 @@ export function renderContactPage() {
             
             <div class="space-y-6 font-mono text-xs">
               <div class="p-5 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl space-y-1">
-                <span class="text-[var(--color-accent)] font-bold block">// Office</span>
+                <span class="text-[var(--color-accent)] font-bold block">// Service Reach</span>
                 <p class="text-sm text-[var(--color-text)] font-semibold">${siteConfig.contact.officeValue}</p>
-                <p class="text-[var(--color-text-muted)]">Visits by appointment only</p>
+                <p class="text-[var(--color-text-muted)]">Serving businesses in India and worldwide</p>
               </div>
 
               <div class="p-5 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl space-y-1">
-                <span class="text-[var(--color-accent)] font-bold block">// Mail</span>
+                <span class="text-[var(--color-accent)] font-bold block">// Email</span>
                 <a href="mailto:${siteConfig.contact.mailValue}" class="text-sm text-[var(--color-text)] font-semibold hover:text-[var(--color-accent)] transition-colors block">
                   ${siteConfig.contact.mailValue}
                 </a>
@@ -48,11 +48,11 @@ export function renderContactPage() {
               </div>
 
               <div class="p-5 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl space-y-1">
-                <span class="text-[var(--color-accent)] font-bold block">// Phone & WhatsApp</span>
+                <span class="text-[var(--color-accent)] font-bold block">// WhatsApp & Phone</span>
                 <a href="tel:${siteConfig.contact.phoneValue}" class="text-sm text-[var(--color-text)] font-semibold hover:text-[var(--color-accent)] transition-colors block">
                   ${siteConfig.contact.phoneValue}
                 </a>
-                <p class="text-[var(--color-text-muted)]">Monday – Friday: 9am – 6pm CET</p>
+                <p class="text-[var(--color-text-muted)]">Direct WhatsApp & phone consultations</p>
               </div>
             </div>
           </div>

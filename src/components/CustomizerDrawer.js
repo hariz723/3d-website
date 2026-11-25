@@ -43,7 +43,7 @@ export function renderCustomizerDrawer() {
             <label class="block text-xs uppercase tracking-wider font-semibold text-white mb-1.5">
               [STUDIO NAME]
             </label>
-            <input type="text" id="cust-studio-name" value="${appState.studioName}" placeholder="e.g. LOVERA 3D" class="w-full px-3.5 py-2.5 text-xs bg-[#161717] border border-[#232525] rounded-xl focus:outline-none focus:border-[#FF531F] text-white font-display text-base">
+            <input type="text" id="cust-studio-name" value="${appState.studioName}" placeholder="e.g. Vesaree Technologies" class="w-full px-3.5 py-2.5 text-xs bg-[#161717] border border-[#232525] rounded-xl focus:outline-none focus:border-[#FF531F] text-white font-display text-base">
           </div>
 
           <!-- CITY -->
@@ -51,13 +51,13 @@ export function renderCustomizerDrawer() {
             <label class="block text-xs uppercase tracking-wider font-semibold text-white mb-1.5">
               [CITY / LOCATION]
             </label>
-            <input type="text" id="cust-studio-city" value="${appState.city}" placeholder="e.g. Los Angeles, CA or New York, NY" class="w-full px-3.5 py-2.5 text-xs bg-[#161717] border border-[#232525] rounded-xl focus:outline-none focus:border-[#FF531F] text-white">
+            <input type="text" id="cust-studio-city" value="${appState.city}" placeholder="e.g. India + Global" class="w-full px-3.5 py-2.5 text-xs bg-[#161717] border border-[#232525] rounded-xl focus:outline-none focus:border-[#FF531F] text-white">
           </div>
 
           <!-- BRAND COLOR PRESETS -->
           <div>
             <label class="block text-xs uppercase tracking-wider font-semibold text-white mb-2">
-              Alexfolio Palette Presets
+              Brand Palette Presets
             </label>
             <div class="grid grid-cols-2 gap-2 text-xs">
               <button class="palette-preset-btn p-3 border border-[#232525] rounded-2xl text-left hover:border-[#FF442B] transition-colors cursor-pointer bg-[#141515]" data-accent="#FF442B">

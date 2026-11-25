@@ -3,7 +3,7 @@ import { renderIcon } from '../utils/icons.js';
 export function renderBeforeAfterSlider(options = {}) {
   const {
     id = 'ba-slider',
-    beforeImg = 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1400&q=80',
+    beforeImg = 'https://images.unsplash.com/photo-1641923599291-8fa80dfb5728?auto=format&fit=crop&w=1400&q=80',
     afterImg = 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85',
     beforeLabel = 'Raw Framing & CAD Structure',
     afterLabel = '4K Photorealistic Render',
